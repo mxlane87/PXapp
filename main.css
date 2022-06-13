@@ -1,0 +1,167 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+  }
+  
+  header {
+      display: flex;
+      justify-content: space-between;
+      background-color: #3a3a3a;
+  }
+
+  h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-left: 20px;
+  }
+  
+#formcontain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#typing {
+  width: 25%;
+  height: auto;
+  margin-right: 100px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+  }
+
+banner {
+  text-align: center;
+}
+
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+  }  
+
+  input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+  }   
+
+  input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+  }    
+
+  #instructions {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    color: lightgray;
+    background-color: darkgreen;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  background-color: #3a3a3a;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 75px;
+}
+
+.drop {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none; 
+    border-bottom: 4px solid darkgreen;
+    border-radius: 8px;
+}
+
+  .dropbtn {
+    background-color: grey;
+    color: black;
+    padding: 30px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+    position: absolute;
+    background-color: #3a3a3a;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: grey;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: grey;
+                                border: none; 
+                                border-bottom: 4px solid darkgreen;}
