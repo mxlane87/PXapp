@@ -3,7 +3,7 @@ const loginButton = document.getElementById("login-form-submit");
 const loginErrorMsg = document.getElementById("login-error-msg");
 
 if (document.cookie.indexOf("CrewCentreSession=Valid") == -1) {
-    location.href = "/Login.html";
+    location.href = "/index.html";
   }
 
 loginButton.addEventListener("click", (e) => {
