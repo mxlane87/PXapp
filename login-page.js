@@ -57,7 +57,7 @@ function onFormSubmit(event){
   }
  
   attempts = 3;
-  localStorage.login="true";
+  sessionStorage.setItem('status','loggedIn');
   localStorage.setItem=('user', usernameInput.value);
   window.location.assign("./home.html");
 }

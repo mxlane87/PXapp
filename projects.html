@@ -11,9 +11,18 @@
 <body>
     <script>
         function logout() {
-          localStorage.login="false";
+          sessionStorage.removeItem('status');
           localStorage.removeItem=('user');
           window.location.assign("index.html");
+        }
+
+        if (sessionStorage.getItem('status') != null) {
+            console.log('You are logged in');
+        }
+        else{
+            console.log('You are not logged in');
+            window.location.assign('index.html');
+            alert('Please log in');
         }
     </script>
 
