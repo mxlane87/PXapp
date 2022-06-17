@@ -1,19 +1,65 @@
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+let
+  attempts = 3,
+  logins = new Map([
+    ['root', 'root'],
+    ['admin', 'admin'],
+    ['user', 'pass123']
+  ]);
+  formElement = document.getElementById('login-form');
 
-if (document.cookie.indexOf("CrewCentreSession=Valid") == -1) {
-    location.href = "./index.html";
-  }
+function disableForm() {
+  const
+    usernameInput = document.getElementById('username-field'),
+    passwordInput = document.getElementById('password-field'),
+    submitButton = document.getElementById('login-form-submit');
 
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const username = loginForm.username.value;
-    const password = loginForm.password.value;
+  usernameInput.setAttribute('disabled', 'disabled');
+  passwordInput.setAttribute('disabled', 'disabled');
+  submitButton.setAttribute('disabled', 'disabled');  
+}
+
+function decreaseAttemptsLeft() {
+
+  attempts--;
+  
+  
+  if (attempts === 0) {
     
-    if (username === "user" && password === "password") {
-        window.location.assign("./home.html");
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-})
+    disableForm();
+    
+    alert('You have failed  to log in 3 times, Fields have been turned off. Please try again later');
+  } else {
+    
+    const
+      message = `You have ${attempts} attempt(s) left.`;
+    alert(message);  
+  }
+}
+
+function onFormSubmit(event){
+  
+  event.preventDefault();
+  
+  const
+    usernameInput = document.getElementById('username-field'),
+    passwordInput = document.getElementById('password-field');
+  
+  if (
+    
+    !logins.has(usernameInput.value) ||
+    
+    logins.get(usernameInput.value) !== passwordInput.value
+  ) {
+    
+    decreaseAttemptsLeft();
+    
+    return;
+  }
+ 
+  attempts = 3;
+  localStorage.login="true";
+  localStorage.setItem=('user', usernameInput.value);
+  window.location.assign("./home.html");
+}
+  
+formElement.addEventListener('submit', onFormSubmit);

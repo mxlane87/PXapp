@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
@@ -30,24 +30,28 @@
         </div>
     </header>
 
-    <h2>Which Project would you like to see next?</h2>
-
-    <div class="content">
-        <div class="project">
-            <img src="images/techproj1.jpg" alt="Projects Image" class="techproj">
-            <button class="selection">New Mobile App</p>
-        </div>
-
-        <div class="project">
-            <img src="images/techproj2.jpg" alt="Projects Image" class="techproj">
-            <button class="selection">New Hardware</p>
-        </div>
-
-        <div class="project">
-            <img src="images/techproj3.jpg" alt="Projects Image" class="techproj">
-            <button class="selection">New Software</p>
-        </div>
-    </div>
-
+    <h2>Contact Us</h2>
+    <div id="formcontain">
+        <div class="form">
+            <form action="/">
+            
+            <div class="item">
+                <label for="name">Name<span>*</span></label>
+                <input id="name" type="text" name="name" required/>
+            </div>
+            <div class="item">
+                <label for="email">Email Address<span>*</span></label>
+                <input id="email" type="email" name="email" required/>
+            </div>
+            <div class="item">
+                <label for="instructions">Message</label>
+                <textarea id="instructions" rows="3"></textarea>
+            </div>
+            <div class="btn-block">
+                <button type="submit" id= "submit" href="/">Submit</button>
+              </div>
+            </form>  
+        </div> 
+    </div>   
 </body>
 </html>
