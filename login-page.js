@@ -64,8 +64,7 @@ function onFormSubmit(event){
   aptrinsic("identify",
   {
   //User Fields
-    "id": "unique-user-id", // Required for logged in app users
-    "username": "username-field",
+    "id": "username-field", // Required for logged in app users
   },
   );
 
