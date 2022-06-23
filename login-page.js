@@ -59,16 +59,18 @@ function onFormSubmit(event){
   attempts = 3;
   sessionStorage.setItem('status','loggedIn');
   localStorage.setItem=('user', usernameInput.value);
-  window.location.assign("./home.html");
-}
-  
-formElement.addEventListener('submit', onFormSubmit);
 
-//passing user and account objects:
-aptrinsic("identify",
+    //passing user and account objects:
+  aptrinsic("identify",
   {
   //User Fields
     "id": "unique-user-id", // Required for logged in app users
     "username": "username-field",
   },
-);
+  );
+
+  window.location.assign("./home.html");
+}
+  
+formElement.addEventListener('submit', onFormSubmit);
+

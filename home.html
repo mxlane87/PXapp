@@ -16,19 +16,6 @@
         var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
       })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2");
 
-          aptrinsic("identify",
-      {
-      //User Fields
-        "id": "unique-user-id", // Required for logged in app users
-        "email": "email",
-        "username": "username-field",
-        "firstName": "fname",
-        "lastName": "lname",
-        "birthdate": "bdate", //unix time in ms
-        "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
-        "price" : 95.5,
-        "userHash": "" // optional transient for HMAC identification
-      });
     </script>
     <!-- Gainsight PX Tag-->
 
@@ -50,6 +37,27 @@
             window.location.assign('index.html');
             alert('Please log in');
         }
+
+    const form = document.getElementById('registration');
+
+    form.addEventListener('submit', (event) => {
+      aptrinsic("identify",
+      {
+      //User Fields
+        "id": "unique-user-id", // Required for logged in app users
+        "email": "email",
+        "username": "username-field",
+        "firstName": "fname",
+        "lastName": "lname",
+        "birthdate": "bdate",
+        "position" : "position", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
+        "department" : 'department',
+        "phoneNumber": "phone",
+        "startTime": "start",
+        "endTime": "end",
+        "userHash": "" // optional transient for HMAC identification
+      });
+    })
 </script>
 
     <header>
@@ -71,7 +79,7 @@
     
 
         <div class="form">
-            <form action="/">
+            <form id="registration">
               
               <div class="item">
                 <label for="fname">First Name<span>*</span></label>
@@ -98,14 +106,14 @@
                 <input id="phone" type="number" placeholder="(XXX) XXX-XXXX"  name="phone" required/>
               </div>
               <div class="item">
-                <label for="bdate">Date<span>*</span></label>
+                <label for="bdate">Birth Date<span>*</span></label>
                 <input id="bdate" type="date" name="bdate" required/>
                 <i class="fas fa-calendar-alt"></i>
               </div>
               <div class="flax">
                 <div class="item">
                   <p>Start Time</p>
-                  <select class="drop">
+                  <select class="drop" id="start">
                     <option selected value="" disabled selected></option>
                     <option value="8A" >8 AM</option>
                     <option value="9A">9 AM</option>
@@ -124,7 +132,7 @@
                 </div>
                 <div class="item">
                   <p>End Time</p>
-                  <select class ="drop">
+                  <select class ="drop" id="end">
                     <option selected value="" disabled selected></option>
                     <option value="8A" >8 AM</option>
                     <option value="9A">9 AM</option>
@@ -148,7 +156,7 @@
               </div>
               <p><small>0/100 characters</small></p>
               <div class="btn-block">
-                <button type="submit" id= "submit" href="/">Submit</button>
+                <button type="submit" id= "submit">Submit</button>
               </div>
             </form>
           </div>
