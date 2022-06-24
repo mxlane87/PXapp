@@ -7,57 +7,10 @@
     <title>Home</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon">
-
-      <!-- Gainsight PX Tag-->
-    <script type="text/javascript">
-      (function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
-          (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
-        var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-        var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-      })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2");
-
-    </script>
-    <!-- Gainsight PX Tag-->
+    <script defer src="login-page.js"></script>
 
 </head>
 <body>
-  <script>
-    function logout() {
-      sessionStorage.removeItem('status');
-      localStorage.removeItem=('user');
-      window.aptrinsic('reset'); 
-      window.location.assign("index.html");
-    }
-
-    if (sessionStorage.getItem('status') != null) {
-            console.log('You are logged in');
-        }
-        else{
-            console.log('You are not logged in');
-            window.location.assign('index.html');
-            alert('Please log in');
-        }
-
-    const form = document.getElementById('registration');
-
-    form.addEventListener('submit', (event) => {
-      aptrinsic("identify",
-      {
-      //User Fields
-        "email": "email",
-        "firstName": "fname",
-        "lastName": "lname",
-        "birthdate": "bdate",
-        "position" : "position", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
-        "department" : 'department',
-        "phone": "phone",
-        "startTime": "start",
-        "endTime": "end",
-        "userHash": "" // optional transient for HMAC identification
-      });
-    })
-</script>
-
     <header>
         <h1><a href="home.html">Max Tech</a></h1>
         <div class="dropdown">
