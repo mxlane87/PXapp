@@ -7,7 +7,17 @@
     <title>Home</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=neon">
-    <script defer src="login-page.js"></script>
+    <script defer src="scripts.js"></script>
+    <script>
+      if (sessionStorage.getItem('status') != null) {
+          console.log('You are logged in');
+      }
+      else{
+          console.log('You are not logged in');
+          window.location.assign('index.html');
+          alert('Please log in');
+      }
+    </script>
 
 </head>
 <body>

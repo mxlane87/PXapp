@@ -2,7 +2,7 @@ let
   attempts = 3,
   logins = new Map([
     ['maxslane@icloud.com', 'root'],
-    ['mxwell.lane@icloud.com', 'root'],
+    ['mxwell.lane@gmail.com', 'root'],
     ['hshahalami@hotmail.com', 'root']
   ]);
   formElement = document.getElementById('login-form');
@@ -54,31 +54,64 @@ function onFormSubmit(event){
     decreaseAttemptsLeft();
     
     return;
-  }
- 
-  if (
-    
-    usernameInput.value == 'maxslane@icloud.com' ||
-    usernameInput.value == 'mxwell.lane@gmail.com' ||
-    usernameInput.value == 'hshahalami@hotmail.com'
-    
-    ) {
-      let a = usernameInput.substr(8, 5);
-      //passing user and account objects:
-      aptrinsic("identify",
-      {
-      //User Fields
-        "id": a, // Required for logged in app users
-        "email": usernameInput.value
-      },
-  );
-    }
 
-  attempts = 3;
-  sessionStorage.setItem('status','loggedIn');
-  localStorage.setItem=('user', usernameInput.value);
+  } 
+    
+      let a = usernameInput.value.substr(8, 5);
+      let b = usernameInput.value.substr(-1, 7);
 
-  window.location.assign("./home.html");
+      if (usernameInput.value === "maxslane@icloud.com") {
+        aptrinsic("identify",
+        {
+        //User Fields
+          "id": a, // Required for logged in app users
+          "email": usernameInput.value,
+          "accountId": b, // Required for logged in app users
+          "role": "Admin",
+          "firstName": "Max",
+          "lastName": "Lane"
+        },
+        {
+          "id": "DEV",
+          "name": "Developer"
+        });
+      } else if (usernameInput.value === "mxwell.lane@gmail.com") {
+        aptrinsic("identify",
+        {
+          //User Fields
+            "id": a, // Required for logged in app users
+            "email": usernameInput.value,
+            "accountId": b, // Required for logged in app users
+            "role": "User",
+            "firstName": "Maxwell",
+            "lastName": "Lane"
+          },
+          {
+            "id": "DEV",
+            "name": "Developer"
+          });
+      } else if (usernameInput.value === "hshahalami@hotmail.com") {
+        aptrinsic("identify",
+        {
+          //User Fields
+            "id": a, // Required for logged in app users
+            "email": usernameInput.value,
+            "accountId": b, // Required for logged in app users
+            "role": "User",
+            "firstName": "Husna",
+            "lastName": "Lane"
+          },
+          {
+            "id": "DEV",
+            "name": "Developer"
+          });
+          } 
+
+      attempts = 3;
+      sessionStorage.setItem('status','loggedIn');
+      localStorage.setItem=('user', usernameInput.value);
+      window.location.assign("./home.html");
+  
 }
   
 function logout() {
@@ -88,45 +121,13 @@ function logout() {
   window.location.assign("index.html");
 }
 
-if (sessionStorage.getItem('status') != null) {
-    console.log('You are logged in');
-}
-else{
-    console.log('You are not logged in');
-    window.location.assign('index.html');
-    alert('Please log in');
-}
-
-const form = document.getElementById('registration');
-
- // formElement.addEventListener('submit', onFormSubmit);
-
-
 
 (function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
   (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
   var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
   var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
   })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2");
+    
 
-  form.addEventListener('submit', (event) => {
-    aptrinsic("identify",
-  {
-  //User Fields
-    "id": "Max123", // Required for logged in app users
-    "email": "userEmail@address.com",
-    "firstName": "Max",
-    "lastName": "Smith",
-    "signUpDate": 1522697426479, //unix time in ms
-    "plan" : "gold", //Custom attributes - please create those custom attributes in Aptrinsic via Account Settings to be tracked.
-    "price" : 95.5,
-    "userHash": "" // optional transient for HMAC identification
-  },
-  {
-  //Account Fields
-    "id":"IBM", //Required
-    "name":"International Business Machine",
-    "Program": "Platinum" // flat custom attributes
- });
-})     
+  formElement.addEventListener('submit', onFormSubmit);
     
