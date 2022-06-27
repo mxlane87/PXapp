@@ -109,7 +109,7 @@ function onFormSubmit(event){
 
       attempts = 3;
       sessionStorage.setItem('status','loggedIn');
-      alert('User Qualified');
+      alert('User Logged In!');
       localStorage.setItem=('user', usernameInput.value);
       window.location.assign("./home.html");
   
