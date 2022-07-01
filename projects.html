@@ -37,20 +37,27 @@ else{
     <h2>Which Project would you like to see next?</h2>
 
     <div class="content">
+        <form method="GET">
         <div class="project">
             <img src="images/techproj1.jpg" alt="Projects Image" class="techproj">
-            <input type=button class="selection" href="location.href='mxlane87.github.io/PXapp/projects.html?project=MOBILE'">New Mobile App</p>
+            <input type=radio name="project" id="mobile" class="selection" value="Mobile">Mobile App</input>
+            <button type="submit" id= "submit">Submit</button>
         </div>
 
         <div class="project">
             <img src="images/techproj2.jpg" alt="Projects Image" class="techproj">
-            <input type=button class="selection" href="location.href='mxlane87.github.io/PXapp/projects.html?project=HARDWARE'">New Hardware</p>
+            <input type=radio name="project" id="hardware" class="selection" value="Hardware" href="location.href='mxlane87.github.io/PXapp/projects.html?project=HARDWARE'">Hardware</input>
+            <button type="submit" id= "submit">Submit</button>
         </div>
 
         <div class="project">
             <img src="images/techproj3.jpg" alt="Projects Image" class="techproj">
-            <input type=button class="selection" href="location.href='mxlane87.github.io/PXapp/projects.html?project=SOFTWARE'">New Software</p>
+            <input type=radio name="project" id="software" class="selection" value="Software" href="location.href='mxlane87.github.io/PXapp/projects.html?project=SOFTWARE'">Software</input>
+            <button type="submit" id= "submit">Submit</button>
         </div>
+
+        
+        </form> 
     </div>
 
 </body>
