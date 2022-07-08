@@ -84,7 +84,8 @@ function onFormSubmit(event){
             "accountId": b, // Required for logged in app users
             "role": "User",
             "firstName": "Maxwell",
-            "lastName": "Lane"
+            "lastName": "Lane",
+            "language": "es-MX"
           },
           {
             "id": "DEV",
