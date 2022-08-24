@@ -146,7 +146,7 @@ function apiTest() {
 
 function apiTest2() {
   aptrinsic('track', 'testEvent3', {"eventName": "testEvent3",
-  "identifyId": "eo1.dev.bomgar.com|16",
-  "propertyKey": "AP-F6CTEIFUQLIZ-2",
+  "identifyId": "@iclo",
+  "propertyKey": "AP-PNUVLPA2TANP-2",
   "userType": "USER" });
 }
