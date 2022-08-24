@@ -139,3 +139,14 @@ function logout() {
 function customEvent() {
   aptrinsic('track', 'Special Instructions', {"name":"Special Instructions", "completed": true });
 }
+
+function apiTest() {
+  aptrinsic('track', '8am Start', {"name":"8am Start", "selected": true });
+}
+
+function apiTest2() {
+  aptrinsic('track', 'testEvent3', {"eventName": "testEvent3",
+  "identifyId": "eo1.dev.bomgar.com|16",
+  "propertyKey": "AP-F6CTEIFUQLIZ-2",
+  "userType": "USER" });
+}
