@@ -150,3 +150,39 @@ function apiTest2() {
   "propertyKey": "AP-PNUVLPA2TANP-2",
   "userType": "USER" });
 }
+
+var config = {
+ 
+  filterUrls : ["*"], //filter all
+   
+  maskUrlFunction: (urlPayload, track) =>
+   
+  {
+   
+  const oldPath = urlPayload.url.split('?')[0]; //get the part of the url before parameters
+   
+  const oldParamString = urlPayload.url.split('?')[1]; //get the parameters
+   
+  const oldParams = new URLSearchParams(oldParamString); //turn into URLSearchParams
+   
+  const lowerParams = new URLSearchParams(); //set const
+   
+  for (const [name, value] of oldParams) {
+   
+  lowerParams.append(name.toLowerCase(), value); //new const with lower-cased name values
+   
+  }
+   
+  urlPayload.url = oldPath + '?' + lowerParams; //reconstruct url
+   
+  },
+   
+  filterType : "mask",
+   
+  // Example query parameter filters
+   
+  namedParamFilter : ["patientid", "providerid", "icd10", "attphys", "bednumber"],
+   
+  nameParamFilterType : "exclude"
+   
+  };
