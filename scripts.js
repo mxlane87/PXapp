@@ -123,34 +123,6 @@ function logout() {
   window.location.assign("index.html");
 }
 
-
-(function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
-  (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
-  var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
-  var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2", {
-    "engagementChecksumFileUrl": "https://mxlane87.github.io/PXapp/checksums.jsongit "
-    }
-    );
-    
-
-  formElement.addEventListener('submit', onFormSubmit);
-    
-function customEvent() {
-  aptrinsic('track', 'Special Instructions', {"name":"Special Instructions", "completed": true });
-}
-
-function apiTest() {
-  aptrinsic('track', '8am Start', {"name":"8am Start", "selected": true });
-}
-
-function apiTest2() {
-  aptrinsic('track', 'testEvent3', {"eventName": "testEvent3",
-  "identifyId": "@iclo",
-  "propertyKey": "AP-PNUVLPA2TANP-2",
-  "userType": "USER" });
-}
-
 var config = {
  
   filterUrls : ["*"], //filter all
@@ -186,3 +158,31 @@ var config = {
   nameParamFilterType : "exclude"
    
   };
+
+(function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
+  (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
+  var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
+  var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
+  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2", {
+    "engagementChecksumFileUrl": "https://mxlane87.github.io/PXapp/checksums.jsongit "
+    },config
+    );
+    
+
+  formElement.addEventListener('submit', onFormSubmit);
+    
+function customEvent() {
+  aptrinsic('track', 'Special Instructions', {"name":"Special Instructions", "completed": true });
+}
+
+function apiTest() {
+  aptrinsic('track', '8am Start', {"name":"8am Start", "selected": true });
+}
+
+function apiTest2() {
+  aptrinsic('track', 'testEvent3', {"eventName": "testEvent3",
+  "identifyId": "@iclo",
+  "propertyKey": "AP-PNUVLPA2TANP-2",
+  "userType": "USER" });
+}
+
