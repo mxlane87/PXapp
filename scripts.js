@@ -123,47 +123,12 @@ function logout() {
   window.location.assign("index.html");
 }
 
-var config = {
- 
-  filterUrls : ["*"], //filter all
-   
-  maskUrlFunction: (urlPayload, track) =>
-   
-  {
-   
-  const oldPath = urlPayload.url.split('?')[0]; //get the part of the url before parameters
-   
-  const oldParamString = urlPayload.url.split('?')[1]; //get the parameters
-   
-  const oldParams = new URLSearchParams(oldParamString); //turn into URLSearchParams
-   
-  const lowerParams = new URLSearchParams(); //set const
-   
-  for (const [name, value] of oldParams) {
-   
-  lowerParams.append(name.toLowerCase(), value); //new const with lower-cased name values
-   
-  }
-   
-  urlPayload.url = oldPath + '?' + lowerParams; //reconstruct url
-   
-  },
-   
-  filterType : "mask",
-   
-  // Example query parameter filters
-   
-  namedParamFilter : ["patientid", "providerid", "icd10", "attphys", "bednumber"],
-   
-  nameParamFilterType : "exclude"
-   
-  };
 
 (function(n,t,a,e,co){var i="aptrinsic";n[i]=n[i]||function(){
   (n[i].q=n[i].q||[]).push(arguments)},n[i].p=e;n[i].c=co;
   var r=t.createElement("script");r.async=!0,r.src=a+"?a="+e;
   var c=t.getElementsByTagName("script")[0];c.parentNode.insertBefore(r,c)
-  })(window,document,config,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2", {
+  })(window,document,"https://web-sdk.aptrinsic.com/api/aptrinsic.js","AP-PNUVLPA2TANP-2", {
     "engagementChecksumFileUrl": "https://mxlane87.github.io/PXapp/checksums.jsongit "
     }
     );
