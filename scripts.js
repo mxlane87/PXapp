@@ -68,6 +68,7 @@ function onFormSubmit(event){
           "email": usernameInput.value,
           "accountId": b, // Required for logged in app users
           "role": "Admin",
+          "role": "User",
           "firstName": "Max",
           "lastName": "Lane"
         },
