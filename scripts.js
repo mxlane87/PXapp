@@ -3,7 +3,8 @@ let
   logins = new Map([
     ['maxslane@icloud.com', 'root'],
     ['mxwell.lane@gmail.com', 'root'],
-    ['hshahalami@hotmail.com', 'root']
+    ['hshahalami@hotmail.com', 'root'],
+    ['admin@maxtech.com', 'root']
   ]);
   formElement = document.getElementById('login-form');
 
@@ -106,6 +107,21 @@ function onFormSubmit(event){
             "id": "DEV",
             "name": "Developer"
           });
+        } else if (usernameInput.value === "admin@maxtech.com") {
+            aptrinsic("identify",
+            {
+              //User Fields
+                "id": a, // Required for logged in app users
+                "email": usernameInput.value,
+                "accountId": b, // Required for logged in app users
+                "role": "User",
+                "firstName": "Max",
+                "lastName": "Lane"
+              },
+              {
+                "id": "DEV",
+                "name": "Developer"
+              });  
           } 
 
       attempts = 3;
