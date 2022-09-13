@@ -131,7 +131,9 @@ function onFormSubmit(event){
       window.location.assign("./home.html");
   
 }
-  
+
+formElement.addEventListener('submit', onFormSubmit);
+
 function logout() {
   sessionStorage.removeItem('status');
   localStorage.removeItem=('user');
