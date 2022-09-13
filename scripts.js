@@ -150,7 +150,7 @@ function logout() {
     );
     
 
-  formElement.addEventListener('submit', onFormSubmit);
+
     
 function customEvent() {
   aptrinsic('track', 'Special Instructions', {"name":"Special Instructions", "completed": true });
