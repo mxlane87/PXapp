@@ -70,7 +70,8 @@ function onFormSubmit(event){
           "accountId": b, // Required for logged in app users
           "role": "Admin",
           "firstName": "Max",
-          "lastName": "Lane"
+          "lastName": "Lane",
+          "position": "Head,Dev"
         },
         {
           "id": "DEV",
