@@ -71,7 +71,8 @@ function onFormSubmit(event){
           "role": "Admin",
           "firstName": "Max",
           "lastName": "Lane",
-          "position": "Head,Dev"
+          "position": "Head,Dev",
+          "parentGroupId": "TestingAttribute"
         },
         {
           "id": "DEV",
