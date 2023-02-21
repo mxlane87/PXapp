@@ -71,12 +71,12 @@ function onFormSubmit(event){
           "role": "Admin",
           "firstName": "Max",
           "lastName": "Lane",
-          "position": "Head,Dev",
-          "parentGroupId": "TestingAttribute"
+          "position": "Head,Dev"
         },
         {
           "id": "DEV",
-          "name": "Developer"
+          "name": "Developer",
+          "parentGroupId": "TestingAttribute"
         });
       } else if (usernameInput.value === "mxwell.lane@gmail.com") {
         aptrinsic("identify",
