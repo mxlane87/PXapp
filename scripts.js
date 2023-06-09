@@ -78,6 +78,7 @@ function onFormSubmit(event){
           "name": "Developer",
           "parentGroupId": "TestingAttribute"
         });
+        aptrinsic('set', 'globalContext', {"AppVersion":V1});
       } else if (usernameInput.value === "mxwell.lane@gmail.com") {
         aptrinsic("identify",
         {
