@@ -170,9 +170,9 @@ function apiTest2() {
 }
 
 function setGcxTrue() {
-  aptrinsic('set', 'globalContext', {"isTrial":"true"});
+  window.aptrinsic('set', 'globalContext', {"isTrial":"true"});
 }
 
 function setGcxFalse() {
-  aptrinsic('set', 'globalContext', {"isTrial":"false"});
+  window.aptrinsic('set', 'globalContext', {"isTrial":"false"});
 }
