@@ -169,3 +169,10 @@ function apiTest2() {
   "userType": "USER" });
 }
 
+function setGcxTrue() {
+  aptrinsic('set', 'globalContext', {"isTrial":"true"});
+}
+
+function setGcxFalse() {
+  aptrinsic('set', 'globalContext', {"isTrial":"false"});
+}
