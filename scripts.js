@@ -78,7 +78,6 @@ function onFormSubmit(event){
           "name": "Developer",
           "parentGroupId": "TestingAttribute"
         });
-        aptrinsic('set', 'globalContext', {"version":12345, "name":"Salesforce", "type":"IFrame"});
       } else if (usernameInput.value === "mxwell.lane@gmail.com") {
         aptrinsic("identify",
         {
